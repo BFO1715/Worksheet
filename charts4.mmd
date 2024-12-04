@@ -1,0 +1,7 @@
+flowchart LR
+    %% External Entities
+    Student[Student] -->|New Student Data| RegistrationSystem[Registration System]
+    Admin[Administrative Staff] -->|Manage Courses| RegistrationSystem
+    AcademicSystem[Academic System] -->|Course Information| RegistrationSystem
+    RegistrationSystem -->|Curriculum Updates| AcademicSystem
+    RegistrationSystem -->|Registration Confirmation| Student

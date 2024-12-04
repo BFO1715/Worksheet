@@ -1,0 +1,11 @@
+flowchart TD
+    %% Registration Process Breakdown
+    A[Student Data] -->|Validate| B[Validate Registration]
+    B -->|Eligibility Request| C[Eligibility Check]
+    C -->|Eligibility Result| B
+    B -->|Payment Details| D[Process Payment]
+    D -->|Payment Status| E[Update Records]
+    E -->|Save to Database| F[Student Database]
+
+    %% Outputs
+    F -->|Confirmation| A[Student Data]

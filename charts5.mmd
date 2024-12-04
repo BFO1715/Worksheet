@@ -1,0 +1,21 @@
+flowchart TD
+    %% External Entities
+    Student[Student] -->|Registration Request| B(Online Registration Portal)
+    D[Administrative Staff] -->|Manage Courses| B
+    E[Academic System] -->|Course Information| B
+
+    %% Processes
+    B -->|Validate Registration| C{Registration Process}
+    C -->|Check Eligibility| F[Course Eligibility Checker]
+    C -->|Process Payment| G[Payment Gateway]
+    C -->|Update Records| H[Student Database]
+
+    %% Data Stores
+    F -->|Course Availability| I[Course Catalog]
+    G -->|Payment Confirmation| H
+    D -->|Modify Courses| I
+    E -->|Update Curriculum| I
+
+    %% Final Data Flow
+    C -->|Confirmation| Student
+    H -->|Registration Details| Student
