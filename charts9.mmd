@@ -1,0 +1,7 @@
+flowchart LR
+    %% External Entities
+    Student[Student] -->|Registration Request| RegistrationProcess[Registration Process]
+    Admin[Administrative Staff] -->|Manage Courses| RegistrationProcess
+    RegistrationProcess -->|Registration Confirmation| Student
+    RegistrationProcess -->|Update Records| StudentDatabase[Student Database]
+    RegistrationProcess -->|Course Details| CourseDatabase[Course Database]
